@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.especialistasensaludbucal.com/</loc><priority>1.00</priority></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/nosotros</loc></url>
+
+  <!-- Detalle de servicios (usa tus slugs) -->
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/limpieza</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/ortodoncia</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/resinas</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/implantes</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/protesis-dental</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/odontologia-estetica</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/cirugia-maxilofacial</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/odontopediatria</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/ortodoncia-general</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/implantologia</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/periodoncia</loc></url>
+  <url><loc>https://www.especialistasensaludbucal.com/servicios/endodoncia</loc></url>
+</urlset>

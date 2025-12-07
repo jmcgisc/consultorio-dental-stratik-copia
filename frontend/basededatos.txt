@@ -1,0 +1,33 @@
+-- Enum para estado de cita
+create type cita_status as enum ('PENDING', 'CONFIRMED', 'CANCELLED');
+
+-- Tabla de citas
+create table if not exists public.citas (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  nombre text not null,
+  telefono text not null,
+  email text,
+  motivo text not null,
+  comentarios text,
+  starts_at timestamptz not null, -- fecha+hora combinadas
+  status cita_status not null default 'PENDING',
+  source text default 'landing'
+);
+
+-- Índices útiles
+create index if not exists idx_citas_starts_at on public.citas (starts_at desc);
+create index if not exists idx_citas_created_at on public.citas (created_at desc);
+
+-- Habilitar RLS
+alter table public.citas enable row level security;
+
+-- Política: permitir INSERT a usuarios anónimos (landing)
+create policy "public_can_insert_citas"
+  on public.citas
+  for insert
+  to anon
+  with check (true);
+
+-- Por seguridad, no exponemos SELECT/UPDATE/DELETE a anon.
+-- (Luego haremos un panel admin con Auth para leer/gestionar)

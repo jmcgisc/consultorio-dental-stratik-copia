@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Design tokens (v4) */
+@theme {
+  /* Marca "dental" (puedes ajustar tonos) */
+  --color-brand-50:  #f2fbfb;
+  --color-brand-100: #d9f4f4;
+  --color-brand-200: #b4e7e7;
+  --color-brand-300: #86d7d7;
+  --color-brand-400: #52c3c3;
+  --color-brand-500: #27a9a9; /* principal */
+  --color-brand-600: #1a8585;
+  --color-brand-700: #176b6b;
+  --color-brand-800: #155555;
+  --color-brand-900: #124545;
+
+  /* Tipografías */
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Base */
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background-color: white;
+  color: #262626;
+}
+:root.dark body {
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+}
+
+/* Componentes utilitarios (puedes seguir usando @apply en v4) */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2.5 rounded-2xl
+           font-medium shadow-sm ring-1 ring-neutral-200 hover:shadow-md transition;
+  }
+  .btn-primary { @apply bg-brand-500 text-white hover:bg-brand-600; }
+  .btn-ghost   { @apply bg-white/60 hover:bg-white/80; }
+  .card {
+    @apply rounded-3xl border border-neutral-200 p-6 shadow-sm bg-white/80;
+  }
+  .container-px { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+}
+/* ---- Legibilidad alta dentro de .card ---- */
+.card {
+  @apply bg-white dark:bg-neutral-500 border border-neutral-200 dark:border-neutral-800 shadow-sm ;
+}
+
+/* Títulos y toggles */
+.card h1, .card h2, .card h3, .card h4, .card summary {
+  @apply text-blue-400 dark:text-white;
+}
+
+/* Texto de cuerpo y listas */
+.card p, .card li, .card ul, .card ol {
+  @apply text-blue-400 dark:text-neutral-200;
+}
+
+/* Detalles/FAQ: icono y hover con buen contraste */
+.card details > summary {
+  @apply cursor-pointer font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors;
+}
