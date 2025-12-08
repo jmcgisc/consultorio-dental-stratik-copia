@@ -131,7 +131,7 @@ export default function AgendarSection() {
     }
   }
 
-  {/* especialistasensaludbucal.1@gmail.com  va a ir a este correo (configúralo en la plantilla EmailJS) */}
+  {/* especialistasensaludbucal.1@gmail.com  va a ir a este correo (configúralo en la plantilla EmailJS) */ }
 
   return (
     <section id="agendar" className="container-px py-16 bg-gray-50 dark:bg-gray-950">
@@ -150,7 +150,7 @@ export default function AgendarSection() {
 
           <div className="mt-8 text-sm text-gray-600 dark:text-gray-400">
             ¿Prefieres hablar?{" "}
-            <a className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="tel:+52 55 5577 0687">Llámanos</a> o escríbenos por{" "}
+            <a className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="tel:+5255 5555 5555">Llámanos</a> o escríbenos por{" "}
             <a
               className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors"
               target="_blank" rel="noreferrer"
@@ -176,7 +176,7 @@ export default function AgendarSection() {
               autoComplete="off"
               tabIndex="-1"
               aria-hidden="true"
-              style={{ position:'absolute', left:'-9999px', top:'-9999px' }}
+              style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}
             />
 
             <div className="sm:col-span-2">
@@ -275,7 +275,7 @@ export default function AgendarSection() {
             >
               {loading ? "Enviando…" : "Solicitar cita"}
             </button>
-  
+
             {ok && (
               <div className="sm:col-span-2 text-sm text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
                 ¡Recibimos tu solicitud! Te contactaremos para confirmar.

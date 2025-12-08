@@ -70,8 +70,8 @@ export default function Navbar() {
   const linkBase = 'px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300'
   const isHome = location.pathname === '/'
   const link = (active) =>
-    active 
-      ? `${linkBase} text-brand-600 bg-brand-50 dark:bg-neutral-800` 
+    active
+      ? `${linkBase} text-brand-600 bg-brand-50 dark:bg-neutral-800`
       : `${linkBase} text-neutral-600 dark:text-neutral-300 hover:bg-brand-50 dark:hover:bg-neutral-800`
 
   const anchors = {
@@ -97,11 +97,10 @@ export default function Navbar() {
   }
 
   return (
-    <header className={`sticky top-0 z-50 backdrop-blur-md transition-all duration-500 ${
-      scrolled 
-        ? 'bg-white/95 shadow-lg border-b border-neutral-200 dark:border-neutral-800' 
-        : 'bg-white/80 dark:bg-neutral-950/60'
-    }`}>
+    <header className={`sticky top-0 z-50 backdrop-blur-md transition-all duration-500 ${scrolled
+      ? 'bg-white/95 shadow-lg border-b border-neutral-200 dark:border-neutral-800'
+      : 'bg-white/80 dark:bg-neutral-950/60'
+      }`}>
       <div className="w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500"></div>
       <nav className="container px-10">
         <div className="flex items-center justify-between h-16">
@@ -114,7 +113,7 @@ export default function Navbar() {
               <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <img
                 src="/images/logo-especialistas-en-salud-bucal.png"
-                alt="Especialistas en salud bucal"
+                alt="Tu consultorio dental en internet"
                 className="h-10 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
                 width="160"
                 height="48"
@@ -123,7 +122,7 @@ export default function Navbar() {
               />
             </div>
             <div className="hidden sm:block">
-              <div className="text-brand-600 dark:text-neutral-600">Especialistas en Salud Bucal</div>
+              <div className="text-brand-600 dark:text-neutral-600">Tu consultorio dental en internet 55 5555 5555</div>
             </div>
           </Link>
 
@@ -145,7 +144,7 @@ export default function Navbar() {
               </button>
 
               {servicesOpen && (
-                <div 
+                <div
                   className="absolute left-0 mt-2 w-72 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-lg p-3 animate-in fade-in-0 zoom-in-95"
                   ref={dropdownContentRef}
                   onMouseEnter={handleDropdownEnter}
@@ -153,11 +152,11 @@ export default function Navbar() {
                   style={{ marginTop: '8px' }}
                 >
                   <div className="absolute -top-2 left-6 w-4 h-4 bg-white dark:bg-neutral-900 border-t border-l border-neutral-200 dark:border-neutral-800 transform rotate-45"></div>
-                  
+
                   <div className="relative space-y-1 z-10">
-                    <a className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 text-neutral-700 dark:text-neutral-300 hover:text-blue-600 transition-all group" 
-                       href={anchors.servicios}
-                       onClick={() => setServicesOpen(false)}>
+                    <a className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 text-neutral-700 dark:text-neutral-300 hover:text-blue-600 transition-all group"
+                      href={anchors.servicios}
+                      onClick={() => setServicesOpen(false)}>
                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                       <span>Vista general</span>
                     </a>
@@ -208,7 +207,7 @@ export default function Navbar() {
               )}
             </div>
 
-            <a className={link(isHome)} href={anchors.antesDespues}>Antes/Después</a> 
+            <a className={link(isHome)} href={anchors.antesDespues}>Antes/Después</a>
             <a className={link(isHome)} href={anchors.testimonios}>Testimonios</a>
             <a className={link(isHome)} href={anchors.ubicacion}>Ubicación</a>
             <a className={link(isHome)} href={anchors.faq}>FAQ</a>
@@ -262,10 +261,10 @@ export default function Navbar() {
                     { label: 'Perodoncia', href: anchors.periodoncia, color: 'bg-teal-500' },
                     { label: 'Ortodoncia', href: anchors.ortodonciaGeneral, color: 'bg-indigo-500' }, // repetido a solicitud
                   ].map((item, index) => (
-                    <a key={index} 
-                       className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 text-neutral-700 dark:text-neutral-300 transition-all"
-                       href={item.href} 
-                       onClick={() => setMobileOpen(false)}>
+                    <a key={index}
+                      className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 text-neutral-700 dark:text-neutral-300 transition-all"
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}>
                       <span className={`w-2 h-2 ${item.color} rounded-full`}></span>
                       <span>{item.label}</span>
                     </a>
@@ -273,7 +272,7 @@ export default function Navbar() {
                 </div>
               </details>
 
-              <a className={link(isHome)} href={anchors.antesDespues} onClick={() => setMobileOpen(false)}>Antes/Después</a> 
+              <a className={link(isHome)} href={anchors.antesDespues} onClick={() => setMobileOpen(false)}>Antes/Después</a>
               <a className={link(isHome)} href={anchors.testimonios} onClick={() => setMobileOpen(false)}>Testimonios</a>
               <a className={link(isHome)} href={anchors.ubicacion} onClick={() => setMobileOpen(false)}>Ubicación</a>
               <a className={link(isHome)} href={anchors.faq} onClick={() => setMobileOpen(false)}>FAQ</a>

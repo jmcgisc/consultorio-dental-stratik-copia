@@ -142,7 +142,7 @@ export default function AgendarSection() {
 
           <div className="mt-8 text-sm text-gray-600 dark:text-gray-400">
             ¿Prefieres hablar?{" "}
-            <a className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="tel:+52 55 5577 0687">Llámanos</a> o por{" "}
+            <a className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="tel:+5255 5555 5555">Llámanos</a> o por{" "}
             <a className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" target="_blank" rel="noreferrer" href="https://wa.me/5215560910802?text=Hola,%20quiero%20agendar%20una%20cita">WhatsApp</a>.
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function AgendarSection() {
           {/* 👉 key={formKey} fuerza un remount sin usar reset() */}
           <form key={formKey} onSubmit={onSubmit} className="mt-6 grid sm:grid-cols-2 gap-4">
             {/* Honeypot */}
-            <input type="text" name="website" autoComplete="off" tabIndex="-1" aria-hidden="true" style={{ position:'absolute', left:'-9999px' }} />
+            <input type="text" name="website" autoComplete="off" tabIndex="-1" aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }} />
 
             <div className="sm:col-span-2">
               <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Nombre</label>
@@ -163,7 +163,7 @@ export default function AgendarSection() {
 
             <div>
               <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Teléfono</label>
-              <input name="telefono" inputMode="tel" placeholder="+52 55 5577 0687" required className="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500" />
+              <input name="telefono" inputMode="tel" placeholder="+52 55 5555 5555" required className="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
 
             <div>

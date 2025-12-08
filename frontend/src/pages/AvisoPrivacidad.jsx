@@ -3,8 +3,8 @@ import { useEffect } from "react"
 
 export default function AvisoPrivacidad() {
   // Ajusta fácilmente estos datos
-  const CLINIC_NAME = "Especialistas en Salud Bucal"
-  const RESPONSABLE = "Especialistas en Salud Bucal"
+  const CLINIC_NAME = "Tu consultorio dental en internet"
+  const RESPONSABLE = "Tu consultorio dental en internet"
   const ADDRESS = "Av. Principal 123, Ciudad de México, CDMX"
   const PHONE = "(55) 0000 0000"
   const EMAIL = "especialistasensaludbucal.1@gmail.com"

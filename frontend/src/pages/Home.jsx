@@ -10,15 +10,15 @@ import FaqAccordion from "../components/FaqAccordion.jsx"
 import CtaFinal from "../components/CtaFinal.jsx"
 import FloatingWhatsApp from "../components/FloatingWhatsApp.jsx"
 import SeoJsonLd from "../components/SeoJsonLd.jsx"
-import QueNecesitasHoy from "../components/QueNecesitasHoy.jsx"        
-import FinanciacionWidget from "../components/FinanciacionWidget.jsx" 
+import QueNecesitasHoy from "../components/QueNecesitasHoy.jsx"
+import FinanciacionWidget from "../components/FinanciacionWidget.jsx"
 import SEO from "../components/SEO.jsx"
 
 
 export default function Home() {
   return (
     <>
-     <SEO
+      <SEO
         title="Clínica dental en CDMX"
         description="Odontólogos certificados en ortodoncia, implantología, estética y más. Agenda tu valoración sin costo."
         image="/images/og/og-home.jpg"
@@ -27,10 +27,10 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Dentist",
             "@id": "https://www.especialistasensaludbucal.com/#clinic",
-            "name": "Especialistas en Salud Bucal",
+            "name": "Tu consultorio dental en internet",
             "image": "https://www.especialistasensaludbucal.com/images/og/og-home.jpg",
             "url": "https://www.especialistasensaludbucal.com",
-            "telephone": "+52 1 55 5577 0687",
+            "telephone": "+52 1 55 5555 5555",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Joyas 120, letra C, col. Estrella, Gustavo A. Madero",
@@ -40,9 +40,9 @@ export default function Home() {
               "addressCountry": "MX"
             },
             "openingHoursSpecification": [
-              { "@type":"OpeningHoursSpecification","dayOfWeek":["Lunes","Martes","Miercoles","Jueves","Viernes"],"opens":"10:00","closes":"19:00" },
-              { "@type":"OpeningHoursSpecification","dayOfWeek":["Sabado"],"opens":"09:00","closes":"18:00" },
-              { "@type":"OpeningHoursSpecification","dayOfWeek":["Domingo"],"opens":"11:00","closes":"17:00" }
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"], "opens": "10:00", "closes": "19:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sabado"], "opens": "09:00", "closes": "18:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Domingo"], "opens": "11:00", "closes": "17:00" }
 
             ],
             "sameAs": [
@@ -55,7 +55,7 @@ export default function Home() {
       <SeoJsonLd />
       <HeroVideoDentista />
       <ServiciosGrid />
-      <QueNecesitasHoy />       
+      <QueNecesitasHoy />
       <AntesDespuesSection />
       {/* <FinanciacionWidget />     */}
       <AgendarSection />

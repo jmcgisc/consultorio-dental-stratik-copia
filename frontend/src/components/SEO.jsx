@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async"
 import { useLocation } from "react-router-dom"
 
 const SITE = {
-  name: "Especialistas en Salud Bucal",
+  name: "Tu consultorio dental en internet",
   domain: "https://www.especialistasensaludbucal.com",
   defaultImage: "/images/og/og-default.jpg",
   locale: "es_MX",

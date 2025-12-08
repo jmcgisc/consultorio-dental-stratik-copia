@@ -23,7 +23,7 @@ export default function UbicacionMapa() {
           </div>
 
           <div className="mt-16 flex flex-wrap gap-3 dark:text-neutral-200">
-            <a className="btn" href="tel:+52 55 5577 0687">Llamar</a>
+            <a className="btn" href="tel:+52 55 5555 5555">Llamar</a>
             <a
               className="btn"
               target="_blank" rel="noreferrer"

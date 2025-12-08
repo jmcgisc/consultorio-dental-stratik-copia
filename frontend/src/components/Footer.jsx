@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-purple-500"></div>
       <div className="absolute -right-20 -top-20 w-64 h-64 bg-blue-200 dark:bg-blue-900 rounded-full opacity-10 blur-3xl"></div>
       <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-teal-200 dark:bg-teal-900 rounded-full opacity-10 blur-3xl"></div>
-      
+
       <div className="relative z-10">
         {/* Newsletter Section */}
         <div className="container-px py-16 border-b border-neutral-200 dark:border-neutral-700">
@@ -24,8 +24,8 @@ export default function Footer() {
               Suscríbete para recibir consejos de salud dental y promociones exclusivas.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="tu.email@ejemplo.com"
                 className="flex-1 px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
@@ -54,7 +54,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-md">
-              Ofrecemos tratamientos dentales de última generación con un enfoque personalizado. 
+              Ofrecemos tratamientos dentales de última generación con un enfoque personalizado.
               Tu comodidad y satisfacción son nuestra máxima prioridad.
             </p>
             <div className="flex gap-4 mt-6">
@@ -106,8 +106,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="font-semibold text-neutral-700 dark:text-neutral-300">WhatsApp</div>
-                  <a href="https://wa.me/5215560910802" className="text-sm text-green-600 dark:text-green-400 hover:underline">
-                    +52 55 6091 0802
+                  <a href="https://wa.me/5215555555555" className="text-sm text-green-600 dark:text-green-400 hover:underline">
+                    +52 55 5555 5555
                   </a>
                 </div>
               </div>
@@ -118,8 +118,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="font-semibold text-neutral-700 dark:text-neutral-300">Teléfono</div>
-                  <a href="tel:+525555770687" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                    +52 55 5577 0687
+                  <a href="tel:+5255 5555 5555" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                    +52 55 5555 5555
                   </a>
                 </div>
               </div>
@@ -157,9 +157,9 @@ export default function Footer() {
                 ))}
               </div>
             </div>
-            
-          </div>  
-          
+
+          </div>
+
           <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-500">
             <span>Desarrollado con</span>
             <span className="text-red-500">❤️</span>
@@ -175,14 +175,14 @@ export default function Footer() {
           <div className="container-px py-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-6 text-sm text-neutral-600 dark:text-neutral-400">
-                <span>© {year} Especialistas en Salud Bucal. Todos los derechos reservados.</span>
+                <span>© {year} Tu consultorio dental en internet Todos los derechos reservados.</span>
                 <div className="hidden md:flex items-center gap-4">
                   <a href="/politica-privacidad" className="hover:text-blue-600 transition-colors">Privacidad</a>
                   <a href="/terminos-servicio" className="hover:text-blue-600 transition-colors">Términos</a>
                   <a href="/cookies" className="hover:text-blue-600 transition-colors">Cookies</a>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-500">
                 <span>Desarrollado con</span>
                 <span className="text-red-500">❤️</span>
