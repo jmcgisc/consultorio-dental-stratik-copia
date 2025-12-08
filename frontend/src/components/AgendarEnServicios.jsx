@@ -68,11 +68,11 @@ export default function AgendarEnServicios() {
     // 2) correo de cortesía al usuario (opcional)
     const toUser = EMAILJS_TEMPLATE_ID_USER && data.email
       ? emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID_USER,
-          { to_email: data.email, ...common },
-          EMAILJS_PUBLIC_KEY
-        )
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID_USER,
+        { to_email: data.email, ...common },
+        EMAILJS_PUBLIC_KEY
+      )
       : Promise.resolve("skipped")
 
     const [clinicRes, userRes] = await Promise.allSettled([toClinic, toUser])
@@ -132,7 +132,7 @@ export default function AgendarEnServicios() {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500"></div>
       <div className="absolute top-20 right-10 w-32 h-32 bg-blue-200 dark:bg-blue-900/20 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-20 left-10 w-32 h-32 bg-teal-200 dark:bg-teal-900/20 rounded-full blur-3xl opacity-30"></div>
-      
+
       <div className="container-px relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full mb-4">
@@ -165,64 +165,64 @@ export default function AgendarEnServicios() {
                 </div>
                 <p className="text-xl font-bold text-neutral-800 dark:text-neutral-100">Solicitar cita</p>
               </div>
-              
+
               {/* Honeypot anti-spam */}
-              <input type="text" name="website" autoComplete="off" tabIndex="-1" aria-hidden="true" style={{ position:'absolute', left:'-9999px' }} />
+              <input type="text" name="website" autoComplete="off" tabIndex="-1" aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }} />
 
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="sm:col-span-2">
                   <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Nombre completo*</label>
                   <input
-                    name="nombre" 
+                    name="nombre"
                     required
                     className="w-full rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-800 dark:text-neutral-200 placeholder-neutral-500 dark:placeholder-neutral-400 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="Tu nombre completo"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Teléfono*</label>
                   <input
-                    name="telefono" 
-                    required 
-                    inputMode="tel" 
+                    name="telefono"
+                    required
+                    inputMode="tel"
                     pattern="[0-9+() -]{8,}"
                     className="w-full rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-800 dark:text-neutral-200 placeholder-neutral-500 dark:placeholder-neutral-400 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="+52 55 1234 5678"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Email</label>
                   <input
-                    type="email" 
+                    type="email"
                     name="email"
                     className="w-full rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-800 dark:text-neutral-200 placeholder-neutral-500 dark:placeholder-neutral-400 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="tucorreo@ejemplo.com"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Fecha*</label>
                   <input
-                    type="date" 
-                    name="fecha" 
-                    required 
+                    type="date"
+                    name="fecha"
+                    required
                     min={minDate}
                     className="w-full rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-800 dark:text-neutral-200 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Hora*</label>
                   <input
-                    type="time" 
-                    name="hora" 
+                    type="time"
+                    name="hora"
                     required
                     className="w-full rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-800 dark:text-neutral-200 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
                 </div>
-                
+
                 <div className="sm:col-span-2">
                   <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Motivo de la consulta</label>
                   <select
@@ -237,11 +237,11 @@ export default function AgendarEnServicios() {
                     <option value="Urgencia">Urgencia dental</option>
                   </select>
                 </div>
-                
+
                 <div className="sm:col-span-2">
                   <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Comentarios adicionales</label>
                   <textarea
-                    name="comentarios" 
+                    name="comentarios"
                     rows="3"
                     className="w-full rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-800 dark:text-neutral-200 placeholder-neutral-500 dark:placeholder-neutral-400 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                     placeholder="¿Algo que debamos saber antes de tu visita?"
@@ -249,8 +249,8 @@ export default function AgendarEnServicios() {
                 </div>
               </div>
 
-              <button 
-                disabled={loading} 
+              <button
+                disabled={loading}
                 className="w-full mt-8 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:transform-none"
               >
                 {loading ? (
@@ -281,7 +281,7 @@ export default function AgendarEnServicios() {
               <a
                 className="w-full mt-4 px-6 py-3 bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800 font-medium rounded-xl hover:bg-green-200 dark:hover:bg-green-900/30 transition-all duration-200 flex items-center justify-center gap-2"
                 href={`https://wa.me/5215560910802?text=${encodeURIComponent("Hola, quiero agendar una cita en la clínica dental.")}`}
-                target="_blank" 
+                target="_blank"
                 rel="noreferrer"
               >
                 💬 Prefiero confirmar por WhatsApp
@@ -308,7 +308,7 @@ export default function AgendarEnServicios() {
                     <div className="text-sm text-neutral-600 dark:text-neutral-400">10:00–14:00 - 16:00 - 20:00</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-green-50 dark:bg-green-900/20">
                   <span className="text-2xl">🌞</span>
                   <div>
@@ -316,15 +316,15 @@ export default function AgendarEnServicios() {
                     <div className="text-sm text-neutral-600 dark:text-neutral-400">9:00–15:00</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-purple-50 dark:bg-purple-900/20">
                   <span className="text-2xl">📞</span>
                   <div>
                     <div className="font-semibold text-neutral-800 dark:text-neutral-100">Teléfono</div>
-                    <div className="text-sm text-neutral-600 dark:text-neutral-400">(+52) 55 5577 0687</div>
+                    <div className="text-sm text-neutral-600 dark:text-neutral-400">(+52) 55 5555 5555</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-orange-50 dark:bg-orange-900/20">
                   <span className="text-2xl">📍</span>
                   <div>
@@ -335,16 +335,16 @@ export default function AgendarEnServicios() {
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-3">
-                <a 
+                <a
                   className="px-4 py-3 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-colors text-center"
                   href="tel:+525555770687"
                 >
                   📞 Llamar ahora
                 </a>
-                <a 
+                <a
                   className="px-4 py-3 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium rounded-xl hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors text-center"
-                  href="https://maps.google.com" 
-                  target="_blank" 
+                  href="https://maps.google.com"
+                  target="_blank"
                   rel="noreferrer"
                 >
                   🗺️ Cómo llegar

@@ -150,7 +150,7 @@ export default function AgendarSection() {
 
           <div className="mt-8 text-sm text-gray-600 dark:text-gray-400">
             ¿Prefieres hablar?{" "}
-            <a className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="tel:+5255 5555 5555">Llámanos</a> o escríbenos por{" "}
+            <a className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="tel:+52 55 5555 5555">Llámanos</a> o escríbenos por{" "}
             <a
               className="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors"
               target="_blank" rel="noreferrer"
